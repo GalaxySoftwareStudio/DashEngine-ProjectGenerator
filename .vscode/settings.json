@@ -1,0 +1,9 @@
+{
+       "editor.fontSize": 14,
+       "editor.tabSize": 4,
+       "files.associations": {
+              "*.inc" : "pascal"
+       },
+       "pascal.codeNavigation": "workspace",
+       "pascal.tags.autoGenerate": true
+}

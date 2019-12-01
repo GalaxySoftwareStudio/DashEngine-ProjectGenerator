@@ -1,0 +1,30 @@
+{
+       "version": "2.0.0",
+        "label": "Compile and Run",
+        "windows": {
+            "command": "ppcrossx64"
+        },
+        "linux": {
+            "command": "ppcrossx64"
+        },
+        "type": "shell",
+        "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+        },
+        "args": ["${file}", "-o${fileDirname}\\Output\\${fileBasenameNoExtension}.exe", "-O2", "-Sc", "-Mobjfpc", "-g", "-gl", "-Fu${workspaceFolder}\\Includes", "-Fu${workspaceFolder}\\Includes\\SFML","-Fu${workspaceFolder}\\Includes\\Core" , "-FU${workspaceFolder}\\CompiledUnits", "-Fl{workspaceFolder}\\Libs", "-Twin64", "-Sh"],
+        "problemMatcher": {
+            "owner": "external",
+            "pattern": {
+                "regexp": "^([\\w]+\\.(p|pp|pas))\\((\\d+)\\,(\\d+)\\)\\s(Fatal|Error|Warning|Note):(.*)",
+                "file": 1,
+                "line": 3,
+                "column": 4,
+                "message": 6
+            }
+        }
+}
